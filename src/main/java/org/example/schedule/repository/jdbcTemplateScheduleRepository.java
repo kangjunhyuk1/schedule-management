@@ -1,6 +1,6 @@
-package repository;
+package org.example.schedule.repository;
 
-import dto.ScheduleRequestDto;
+import org.example.schedule.dto.ScheduleResponseDto;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -17,8 +17,8 @@ public class jdbcTemplateScheduleRepository implements ScheduleRepository{
     }
 
     @Override
-    public List<ScheduleRequestDto> findAll() {
+    public List<ScheduleResponseDto> findAll(String workerName, String modifiedDate) {
         // 천제 조회하는 쿼리 정의
-        return
+        return List.of();
     }
 }

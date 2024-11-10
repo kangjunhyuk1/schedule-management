@@ -1,10 +1,9 @@
-package service;
+package org.example.schedule.service;
 
 
-import dto.ScheduleResponsDto;
-import entity.Schedule;
+import org.example.schedule.dto.ScheduleResponseDto;
 import org.springframework.stereotype.Service;
-import repository.ScheduleRepository;
+import org.example.schedule.repository.ScheduleRepository;
 
 import java.util.List;
 
@@ -18,7 +17,7 @@ public class ScheduleServiceImpl implements ScheduleService{
     }
 
     @Override
-    public List<ScheduleResponsDto> findAll() {
+    public List<ScheduleResponseDto> findAll(String workerName, String modifiedDate) {
         return scheduleRepository.findAll();
     }
 }
