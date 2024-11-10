@@ -18,6 +18,6 @@ public class ScheduleServiceImpl implements ScheduleService{
 
     @Override
     public List<ScheduleResponseDto> findAll(String workerName, String modifiedDate) {
-        return scheduleRepository.findAll();
+        return scheduleRepository.findAll(workerName, modifiedDate);
     }
 }
